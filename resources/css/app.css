@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Figtree', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body stretches to the full viewport height */
+}
+
+header {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+    text-align: center; /* Center content */
+}
+
+footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+
+
+.books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.book {
+    position: relative; /* Ensure relative positioning for absolute children */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    height: 25em; /* Occupy full height */
+    display: flex;
+    flex-direction: column;
+}
+
+.book:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.book-actions {
+    position: absolute; /* Position at the bottom */
+    bottom: 20px; /* Adjust as needed for spacing */
+    left: 20px; /* Adjust as needed for spacing */
+    right: 20px; /* Adjust as needed for spacing */
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-action {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+    background-color: #0056b3;
+}
+
+
+.btn-action.delete {
+    background-color: #dc3545;
+}
+
+.btn-action.delete:hover {
+    background-color: #c82333;
+}
+
+/* public/css/app.css */
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-action {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-action:hover {
+    background-color: #0056b3;
+}
+
+/* Example CSS in app.css */
+
+.book-edit-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.edit-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Example CSS in app.css */
+
+.book-show-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-details {
+    margin-bottom: 20px;
+}
+
+.book-details p {
+    margin: 5px 0;
+}
+
+.book-actions {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+.w-5.h-5 {
+
+    display: none;
+}
